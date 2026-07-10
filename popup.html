@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body {
+            width: 260px;
+            padding: 16px;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: #1a1a1a;
+            color: #fff;
+            margin: 0;
+        }
+        h1 {
+            font-size: 18px;
+            margin: 0 0 12px 0;
+            color: #ff0000;
+            text-align: center;
+        }
+        .toggle-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 14px;
+            background: #2a2a2a;
+            border-radius: 8px;
+            margin-bottom: 12px;
+        }
+        .toggle-switch {
+            width: 44px;
+            height: 24px;
+            background: #555;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: 0.3s;
+            position: relative;
+            flex-shrink: 0;
+        }
+        .toggle-switch.active {
+            background: #065fd4;
+        }
+        .toggle-switch::after {
+            content: '';
+            position: absolute;
+            top: 2px;
+            left: 2px;
+            width: 20px;
+            height: 20px;
+            background: white;
+            border-radius: 50%;
+            transition: 0.3s;
+        }
+        .toggle-switch.active::after {
+            left: 22px;
+        }
+        .status-box {
+            background: #2a2a2a;
+            border-radius: 8px;
+            padding: 10px 14px;
+            margin-bottom: 10px;
+            font-size: 13px;
+        }
+        .status-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 3px 0;
+        }
+        .status-row .label { color: #888; }
+        .status-row .value { color: #fff; font-weight: 500; }
+        .status-row .value.active { color: #4CAF50; }
+        .status-row .value.inactive { color: #ff6b6b; }
+        .btn {
+            width: 100%;
+            padding: 8px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 13px;
+            font-weight: 500;
+            transition: 0.3s;
+            margin-top: 4px;
+        }
+        .btn-primary {
+            background: #065fd4;
+            color: white;
+        }
+        .btn-primary:hover {
+            background: #054a9e;
+        }
+        .info {
+            font-size: 11px;
+            color: #666;
+            text-align: center;
+            margin-top: 10px;
+            padding-top: 10px;
+            border-top: 1px solid #2a2a2a;
+        }
+    </style>
+</head>
+<body>
+    <h1>👍 Auto Like</h1>
+    
+    <div class="toggle-container">
+        <span style="font-size:14px;">Ativar</span>
+        <div id="toggleSwitch" class="toggle-switch active"></div>
+    </div>
+    
+    <div class="status-box">
+        <div class="status-row">
+            <span class="label">Status</span>
+            <span class="value active" id="statusText">Ativado</span>
+        </div>
+        <div class="status-row">
+            <span class="label">Vídeo</span>
+            <span class="value" id="videoStatus">⏳ Aguardando...</span>
+        </div>
+        <div class="status-row">
+            <span class="label">Like</span>
+            <span class="value" id="likeStatus">⏸️ Pendente</span>
+        </div>
+    </div>
+    
+    <button class="btn btn-primary" id="manualLike">👍 Dar Like Agora</button>
+    
+    <div class="info">⏱️ Like automático após 20 segundos</div>
+
+    <script src="popup.js"></script>
+</body>
+</html>
