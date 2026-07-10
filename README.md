@@ -29,13 +29,6 @@ O **YouTube Auto Like** é uma extensão leve e simples que automatiza o process
 - 📱 **Leve e Rápido** - Não consome recursos do navegador
 - 🔒 **Privacidade** - Não coleta dados, tudo roda localmente
 
-### 🖼️ Screenshots
-
-<div align="center">
-  <img src="screenshots/popup.png" alt="Popup da extensão" width="300">
-  <img src="screenshots/notification.png" alt="Notificação de like" width="300">
-</div>
-
 ---
 
 ## 🚀 Instalação
